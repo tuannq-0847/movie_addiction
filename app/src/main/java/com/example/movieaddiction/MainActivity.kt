@@ -1,6 +1,7 @@
 package com.example.movieaddiction
 
 import com.example.movieaddiction.databinding.ActivityMainBinding
+import com.example.movieaddiction.ui.WelcomeFragment
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.karleinstein.basemvvm.base.BaseActivity
 import com.karleinstein.basemvvm.extension.addFragment

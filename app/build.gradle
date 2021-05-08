@@ -90,7 +90,9 @@ dependencies {
     //pager indicators
     implementation 'com.google.accompanist:accompanist-pager-indicators:0.8.1'
     //base mvvm
-    implementation 'com.github.tuannq-0847:BaseMVVM:0.0.1-08'
+    implementation 'com.github.tuannq-0847:BaseMVVM:0.0.2-02'
+    //jetpack compose navigation
+    implementation "androidx.navigation:navigation-compose:1.0.0-alpha10"
     // UI Tests
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     testImplementation 'junit:junit:4.+'

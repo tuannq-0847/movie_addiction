@@ -1,6 +1,7 @@
-package com.example.movieaddiction
+package com.example.movieaddiction.utils
 
 import android.util.Log
+import com.example.movieaddiction.BuildConfig
 
 object Karl {
 

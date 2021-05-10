@@ -1,5 +1,8 @@
 package com.example.movieaddiction
 
+import com.example.movieaddiction.di.apiModule
+import com.example.movieaddiction.di.remoteDataSourceModule
+import com.example.movieaddiction.di.repositoryModule
 import com.example.movieaddiction.di.viewModelModule
 import com.karleinstein.basemvvm.BaseApplication
 import org.koin.android.ext.koin.androidContext
@@ -16,7 +19,7 @@ class MovieApplication : BaseApplication() {
             //inject Android context
             androidContext(this@MovieApplication)
             // use modules
-            modules(viewModelModule)
+            modules(viewModelModule, repositoryModule, remoteDataSourceModule, apiModule)
         }
     }
 }

@@ -16,7 +16,7 @@ class MainActivity : BaseActivity() {
     override fun bindView() {
         setContent {
             val navHostController = rememberNavController()
-            AppNavigation(navController = navHostController)
+            AppNavigation(navController = navHostController,fragmentManager = supportFragmentManager)
         }
     }
 

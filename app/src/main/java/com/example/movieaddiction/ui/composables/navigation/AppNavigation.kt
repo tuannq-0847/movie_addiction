@@ -1,6 +1,7 @@
 package com.example.movieaddiction.ui.composables.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -11,7 +12,7 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 
 @ExperimentalPagerApi
 @Composable
-fun AppNavigation(navController: NavHostController) {
+fun AppNavigation(navController: NavHostController, fragmentManager: FragmentManager) {
     NavHost(
         navController = navController,
         startDestination = MovieAddictionScreen.WELCOME_ROUTE.name
@@ -23,7 +24,7 @@ fun AppNavigation(navController: NavHostController) {
             LoginScreen(navController = navController)
         }
         composable(MovieAddictionScreen.HOME_ROUTE.name) {
-            HomeScreen(navHostController = navController)
+            HomeScreen(navHostController = navController,fragmentManager)
         }
     }
 }

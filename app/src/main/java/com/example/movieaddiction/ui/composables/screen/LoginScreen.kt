@@ -1,10 +1,8 @@
 package com.example.movieaddiction.ui.composables.screen
 
-import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -28,6 +26,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.navigate
 import com.example.movieaddiction.R
 import com.example.movieaddiction.ui.composables.navigation.MovieAddictionScreen
+import com.example.movieaddiction.utils.linkToM
 
 @Composable
 fun LoginScreen(navController: NavController) {
@@ -90,10 +89,11 @@ fun LoginScreen(navController: NavController) {
                 .width(400.dp)
                 .padding(bottom = 16.dp)
                 .constrainAs(fb) {
-                    top.linkTo(gg.bottom)
-                    start.linkTo(parent.start)
-                    end.linkTo(parent.end)
-                    bottom.linkTo(skip.top)
+                    this.linkToM(top = gg.bottom,bottom = skip.top)
+//                    top.linkTo(gg.bottom)
+//                    start.linkTo(parent.start)
+//                    end.linkTo(parent.end)
+//                    bottom.linkTo(skip.top)
                 }) {
             Text(
                 text = "Sign in with Facebook",
